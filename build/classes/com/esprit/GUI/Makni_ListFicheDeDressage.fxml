@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="com.esprit.GUI.Makni_ListFicheDeDressageController">
+    <children>
+        <TableView fx:id="listeFicheDeDressage" layoutX="-2.0" layoutY="119.0" prefHeight="234.0" prefWidth="790.0">
+            <columns>
+                <TableColumn fx:id="id" prefWidth="56.0" text="N°:" visible="false" />
+                <TableColumn fx:id="specialite" prefWidth="124.0" text="specialite" />
+                <TableColumn fx:id="displine" text="displine" />
+                <TableColumn fx:id="obeissance" prefWidth="97.0" text="obeissance" />
+                <TableColumn fx:id="accompagnement" prefWidth="98.0" text="accompagnement" />
+                <TableColumn fx:id="interception" prefWidth="90.0" text="interception" />
+                <TableColumn fx:id="noteTotal" prefWidth="68.0" text="noteTotal" />
+                <TableColumn fx:id="dateDebut" prefWidth="111.0" text="dateDebut" />
+                <TableColumn fx:id="dateFin" prefWidth="141.0" text="dateFin" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

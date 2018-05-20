@@ -9,7 +9,7 @@ package com.esprit.entities;
  *
  * @author user
  */
-public class User {
+public class Userr {
 
     private int id;
     private String username;
@@ -30,15 +30,15 @@ public class User {
     private String role;
     private String Emailofconnecteduser;
     private static int IdOfConnectedUser =0;
-    private static User userConncter;
+    private static Userr userConncter;
     
-    public User() {
+    public Userr() {
     }
-    public User(int id) {
+    public Userr(int id) {
         this.id = id;
     }
 
-    public User(String username, String email, String pasword, String image, String gouvernorat, String role) {
+    public Userr(String username, String email, String pasword, String image, String gouvernorat, String role) {
 
 
 
@@ -211,15 +211,15 @@ public class User {
     }
 
     public static void setIdOfConnectedUser(int IdOfConnectedUser) {
-        User.IdOfConnectedUser = IdOfConnectedUser;
+        Userr.IdOfConnectedUser = IdOfConnectedUser;
     }
 
-    public static User getUserConncter() {
+    public static Userr getUserConncter() {
         return userConncter;
     }
 
-    public static void setUserConncter(User userConncter) {
-        User.userConncter = userConncter;
+    public static void setUserConncter(Userr userConncter) {
+        Userr.userConncter = userConncter;
     }
     
 

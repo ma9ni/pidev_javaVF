@@ -15,7 +15,7 @@ import java.util.Date;
 public class Animal {
 
     private int id;
-    private User id_membre;
+    private Userr id_membre;
 
     private String nom;
     private String nomproprietaire;
@@ -39,7 +39,7 @@ public class Animal {
         this.id_membree = id_membree;
     }
 
-    public Animal(int id, User id_membre, String nom, String nomproprietaire, String description, String sexe, Date datedenaissance, String race, String image) {
+    public Animal(int id, Userr id_membre, String nom, String nomproprietaire, String description, String sexe, Date datedenaissance, String race, String image) {
         this.id = id;
         this.id_membre = id_membre;
         this.nom = nom;
@@ -69,11 +69,11 @@ public class Animal {
         this.id = id;
     }
 
-    public User getId_membre() {
+    public Userr getId_membre() {
         return id_membre;
     }
 
-    public void setId_membre(User id_membre) {
+    public void setId_membre(Userr id_membre) {
         this.id_membre = id_membre;
     }
 

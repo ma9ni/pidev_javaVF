@@ -21,7 +21,7 @@ public class sosDisparition {
     private String race;
     private int num_tel;
     private String adresse;
-    private User id_membre;
+    private Userr id_membre;
     private String image;
     private String lieu;
     private String sexe;
@@ -84,11 +84,11 @@ public class sosDisparition {
         this.adresse = adresse;
     }
 
-    public User getId_membre() {
+    public Userr getId_membre() {
         return id_membre;
     }
 
-    public void setId_membre(User id_membre) {
+    public void setId_membre(Userr id_membre) {
         this.id_membre = id_membre;
     }
 
@@ -132,7 +132,7 @@ public class sosDisparition {
         return "sosDisparition{" + "id=" + id + ", nomproprietaire=" + nomproprietaire + ", description=" + description + ", Date=" + Date + ", race=" + race + ", num_tel=" + num_tel + ", adresse=" + adresse + ", id_membre=" + id_membre + ", image=" + image + ", lieu=" + lieu + ", sexe=" + sexe + ", formater=" + formater + '}';
     }
 
-    public sosDisparition(int id, String nomproprietaire, String description, Date Date, String race, int num_tel, String adresse, User id_membre, String image, String lieu, String sexe) {
+    public sosDisparition(int id, String nomproprietaire, String description, Date Date, String race, int num_tel, String adresse, Userr id_membre, String image, String lieu, String sexe) {
         this.id = id;
         this.nomproprietaire = nomproprietaire;
         this.description = description;

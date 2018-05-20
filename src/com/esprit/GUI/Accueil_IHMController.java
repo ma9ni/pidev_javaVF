@@ -76,7 +76,7 @@ public class Accueil_IHMController implements Initializable {
 
     @FXML
     private void onClickSoin(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Makni_AffichageFicheDeSoinGUI.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("ConsulterFicheDeSoinIHM.fxml"));
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

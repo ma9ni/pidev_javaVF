@@ -12,7 +12,7 @@ package com.esprit.GUI;
 import com.esprit.SERVICE.ControlleurChamps;
 import com.esprit.SERVICE.FicheDeDressageService;
 import com.esprit.entities.FicheDeDressage;
-import com.esprit.entities.User;
+import com.esprit.entities.Userr;
 import com.esprit.entities.Animal;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -221,7 +221,7 @@ public class FicheDeDressageIHMController implements Initializable {
                 alert.showAndWait();
 
             } else {
-                User u = new User(12);
+                Userr u = new Userr(12);
                 float ntotal = Float.parseFloat(despline.getText()) + Float.parseFloat(obeissance.getText()) + Float.parseFloat(accompagnement.getText()) + Float.parseFloat(interception.getText()) / 4;
                 FicheDeDressage fdd = new FicheDeDressage(u, specialite.getText(), Float.parseFloat(despline.getText()), Float.parseFloat(obeissance.getText()), Float.parseFloat(accompagnement.getText()), Float.parseFloat(interception.getText()), ntotal, datedeb, datFin, a, 1);
                 cfdd.ajouterFicheDeDressage(fdd);

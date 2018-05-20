@@ -7,7 +7,7 @@ package com.esprit.SERVICE;
 
 import Utilities.DataSource;
 import com.esprit.entities.FicheDeDressage;
-import com.esprit.entities.User;
+import com.esprit.entities.Userr;
 import com.esprit.entities.Animal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -41,7 +41,7 @@ public class FicheDeDressageService {
             while (rs.next()) {
                 fdd = new FicheDeDressage();
                 fdd.setId(rs.getInt("id"));
-                User u = new User(rs.getInt("id_membre"));
+                Userr u = new Userr(rs.getInt("id_membre"));
                 fdd.setId_membre(u);
                 fdd.setDispline(rs.getFloat("displine"));
                 fdd.setObeissance(rs.getFloat("obeissance"));

@@ -164,7 +164,6 @@ public class ConsulterFicheDeDressageController implements Initializable {
     public void ref() {
         listeFicheDeDressage.getItems().clear();
         listeFicheDeDressage.getItems().addAll(cfdd.displayFicheDeDressage());
-
     }
 
     private boolean verif() {

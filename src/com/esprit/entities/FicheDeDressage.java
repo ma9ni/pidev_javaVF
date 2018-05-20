@@ -14,7 +14,7 @@ import java.util.Date;
 public class FicheDeDressage {
 
     private int id;
-    private User id_membre;
+    private Userr id_membre;
     private String specialite;
     private float displine;
     private float obeissance;
@@ -29,7 +29,7 @@ public class FicheDeDressage {
     public FicheDeDressage() {
     }
 
-    public FicheDeDressage(int id, User id_membre, String specialite, float displine, float obeissance, float accompagnement, float interception, float noteTotal, Date dateDebut, Date dateFin, Animal id_animal, int etat) {
+    public FicheDeDressage(int id, Userr id_membre, String specialite, float displine, float obeissance, float accompagnement, float interception, float noteTotal, Date dateDebut, Date dateFin, Animal id_animal, int etat) {
         this.id = id;
         this.id_membre = id_membre;
         this.specialite = specialite;
@@ -44,7 +44,7 @@ public class FicheDeDressage {
         this.etat = etat;
     }
 
-    public FicheDeDressage(User id_membre, String specialite, float displine, float obeissance, float accompagnement, float interception, float noteTotal, Date dateDebut, Date dateFin, Animal id_animal, int etat) {
+    public FicheDeDressage(Userr id_membre, String specialite, float displine, float obeissance, float accompagnement, float interception, float noteTotal, Date dateDebut, Date dateFin, Animal id_animal, int etat) {
 
         this.id_membre = id_membre;
         this.specialite = specialite;
@@ -81,11 +81,11 @@ public class FicheDeDressage {
         this.id = id;
     }
 
-    public User getId_membre() {
+    public Userr getId_membre() {
         return id_membre;
     }
 
-    public void setId_membre(User id_membre) {
+    public void setId_membre(Userr id_membre) {
         this.id_membre = id_membre;
     }
 

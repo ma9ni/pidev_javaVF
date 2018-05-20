@@ -9,7 +9,7 @@ package com.esprit.entities;
  *
  * @author user
  */
-public class User {
+public class Userr {
 
     private int id;
     private String username;
@@ -29,38 +29,30 @@ public class User {
     private String last_login;
     private String role;
     private String Emailofconnecteduser;
-    private static int IdOfConnectedUser =0;
-    private static User userConncter;
-    
-    public User() {
-    }
-    public User(int id) {
-        this.id = id;
-    }
+    private static int IdOfConnectedUser = 0;
+    private static Userr userConncter;
 
-    public User(String username, String email, String pasword, String image, String gouvernorat, String role) {
-
-
-
-    
-
-    this.username = username;
+    public Userr(String username, String email, String pasword, int num_tel, String image, String adresse, String role) {
+        this.username = username;
         this.email = email;
         this.pasword = pasword;
+        this.num_tel = num_tel;
         this.image = image;
-        this.gouvernorat = gouvernorat;
+        this.adresse = adresse;
         this.role = role;
     }
 
-    public String getRole() {
-        return role;
+    public Userr(String username, String email, String pasword, int num_tel, String image, String adresse) {
+        this.username = username;
+        this.email = email;
+        this.pasword = pasword;
+        this.num_tel = num_tel;
+        this.image = image;
+        this.adresse = adresse;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public Userr() {
     }
-
-    
 
     public int getId() {
         return id;
@@ -190,12 +182,12 @@ public class User {
         this.last_login = last_login;
     }
 
- 
-  
+    public String getRole() {
+        return role;
+    }
 
-    @Override
-    public String toString() {
-        return "User{" + "id=" + id + ", username=" + username + ", username_canonical=" + username_canonical + ", email_canonical=" + email_canonical + ", email=" + email + ", enabled=" + enabled + ", pasword=" + pasword + ", num_tel=" + num_tel + ", confirmation=" + confirmation + ", image=" + image + ", adresse=" + adresse + ", gouvernorat=" + gouvernorat + ", note=" + note + ", password_requested_at=" + password_requested_at + ", confirmation_token=" + confirmation_token + ", last_login=" + last_login + '}';
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public String getEmailofconnecteduser() {
@@ -211,16 +203,20 @@ public class User {
     }
 
     public static void setIdOfConnectedUser(int IdOfConnectedUser) {
-        User.IdOfConnectedUser = IdOfConnectedUser;
+        Userr.IdOfConnectedUser = IdOfConnectedUser;
     }
 
-    public static User getUserConncter() {
+    public static Userr getUserConncter() {
         return userConncter;
     }
 
-    public static void setUserConncter(User userConncter) {
-        User.userConncter = userConncter;
+    public static void setUserConncter(Userr userConncter) {
+        Userr.userConncter = userConncter;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Userr{" + "id=" + id + ", username=" + username + ", username_canonical=" + username_canonical + ", email_canonical=" + email_canonical + ", email=" + email + ", enabled=" + enabled + ", pasword=" + pasword + ", num_tel=" + num_tel + ", confirmation=" + confirmation + ", image=" + image + ", adresse=" + adresse + ", gouvernorat=" + gouvernorat + ", note=" + note + ", password_requested_at=" + password_requested_at + ", confirmation_token=" + confirmation_token + ", last_login=" + last_login + ", role=" + role + ", Emailofconnecteduser=" + Emailofconnecteduser + '}';
+    }
 
 }

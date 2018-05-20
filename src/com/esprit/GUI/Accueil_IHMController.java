@@ -120,4 +120,16 @@ public class Accueil_IHMController implements Initializable {
     private void onClickProfil(ActionEvent event) {
     }
 
+    @FXML
+    private void login(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("IHM_login.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.hide();
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
 }

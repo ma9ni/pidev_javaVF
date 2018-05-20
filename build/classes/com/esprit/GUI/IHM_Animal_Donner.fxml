@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="com.esprit.GUI.IHM_Animal_DonnerController">
+   <children>
+      <TableView fx:id="tableAnimal" layoutX="95.0" layoutY="69.0" prefHeight="250.0" prefWidth="424.0">
+        <columns>
+          <TableColumn fx:id="photo" prefWidth="90.0" text="photo" />
+          <TableColumn fx:id="race" prefWidth="67.0" text="race" />
+            <TableColumn fx:id="sexe" prefWidth="75.0" text="sexe" />
+            <TableColumn fx:id="nom" prefWidth="75.0" text="nom" />
+            <TableColumn fx:id="dateNaissance" prefWidth="116.0" text="date de naissance" />
+        </columns>
+      </TableView>
+      <Button layoutX="398.0" layoutY="336.0" mnemonicParsing="false" onAction="#retour" prefHeight="25.0" prefWidth="58.0" text="Retour" />
+      <Label layoutX="176.0" layoutY="28.0" text="choisir un animal pour  Donner">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="484.0" layoutY="336.0" mnemonicParsing="false" onAction="#Anuler" text="Annuler" />
+      <Button layoutX="214.0" layoutY="336.0" mnemonicParsing="false" onAction="#Suivant" text="Suivant" />
+      <Button layoutX="307.0" layoutY="336.0" mnemonicParsing="false" onAction="#Ajouter" text="Ajouter" />
+   </children>
+</AnchorPane>

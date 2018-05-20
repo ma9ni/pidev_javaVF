@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="imageView" prefHeight="468.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.GUI.IHM_inscriptionController">
+     
+   <children>
+      <Label layoutX="32.0" layoutY="70.0" text="Uername*" />
+      <Label layoutX="52.0" layoutY="211.0" text="Tel* :" />
+      <TextField fx:id="nom" layoutX="87.0" layoutY="66.0" promptText="username" />
+      <TextField fx:id="tel" layoutX="87.0" layoutY="207.0" promptText="tel" />
+      <Button fx:id="ajouter" layoutX="371.0" layoutY="345.0" mnemonicParsing="false" onAction="#ajouter" text="ajouter" />
+      <Label layoutX="340.0" layoutY="83.0" text="Mot de Passe *" />
+      <Label layoutX="39.0" layoutY="144.0" text="Email *" />
+      <Label layoutX="39.0" layoutY="271.0" text="Adresse" />
+      <TextField fx:id="adresse" layoutX="87.0" layoutY="267.0" promptText="adresse" />
+      <TextField fx:id="email" layoutX="92.0" layoutY="140.0" promptText="email" />
+      <Label layoutX="340.0" layoutY="241.0" text="Type*" />
+      <Label layoutX="340.0" layoutY="157.0" text="confirmer mot de passe*:" />
+      <ChoiceBox fx:id="type" layoutX="337.0" layoutY="267.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="43.0" layoutY="336.0" text="Photo" />
+      <Button fx:id="brows" layoutX="199.0" layoutY="332.0" mnemonicParsing="false" onAction="#brows" text="brows" />
+      <TextField fx:id="doc" layoutX="89.0" layoutY="332.0" prefHeight="25.0" prefWidth="109.0" />
+      <Button layoutX="482.0" layoutY="341.0" mnemonicParsing="false" onAction="#annuler" text="Annuler" />
+      <Label fx:id="Erornom" layoutX="102.0" layoutY="91.0" textFill="#f50c0c" />
+      <Label fx:id="ErorEmail" layoutX="433.0" layoutY="91.0" textFill="#f50c0c" />
+      <Label fx:id="Errorprenom" layoutX="98.0" layoutY="165.0" textFill="#f50c0c" />
+      <Label fx:id="errorMotPAsse" layoutX="433.0" layoutY="165.0" textFill="#f50c0c" />
+      <Label fx:id="errorConfirmerMotdePass" layoutX="433.0" layoutY="232.0" textFill="#f50c0c" />
+      <Label fx:id="erroreTel" layoutX="98.0" layoutY="232.0" textFill="#f50c0c" />
+      <Label fx:id="ErorAdresse" layoutX="98.0" layoutY="292.0" textFill="#f50c0c" />
+      <Label fx:id="ErrorePhoto" layoutX="98.0" layoutY="358.0" textFill="#f50c0c" />
+      <Label fx:id="Erortype" layoutX="433.0" layoutY="292.0" textFill="#f50c0c" />
+      <PasswordField fx:id="motdepasse" layoutX="337.0" layoutY="115.0" prefHeight="25.0" prefWidth="180.0" promptText="mot de passe" />
+      <PasswordField fx:id="conf" layoutX="337.0" layoutY="186.0" prefHeight="25.0" prefWidth="180.0" promptText="confirmer mot de passe" />
+      <ImageView fx:id="image" fitHeight="79.0" fitWidth="200.0" layoutX="52.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

@@ -17,13 +17,13 @@ public class Rating {
     private int note;
     private String commentaire;
     private Date datenote;
-    private User idUser;
-    private User idMembreCO;
+    private Userr idUser;
+    private Userr idMembreCO;
 
     public Rating() {
     }
 
-    public Rating(int id, int note, String commentaire, Date datenote, User idUser, User idMembreCO) {
+    public Rating(int id, int note, String commentaire, Date datenote, Userr idUser, Userr idMembreCO) {
         this.id = id;
         this.note = note;
         this.commentaire = commentaire;
@@ -32,7 +32,7 @@ public class Rating {
         this.idMembreCO = idMembreCO;
     }
 
-    public Rating(int note, String commentaire, Date datenote, User idUser, User idMembreCO) {
+    public Rating(int note, String commentaire, Date datenote, Userr idUser, Userr idMembreCO) {
         this.note = note;
         this.commentaire = commentaire;
         this.datenote = datenote;
@@ -72,19 +72,19 @@ public class Rating {
         this.datenote = datenote;
     }
 
-    public User getIdUser() {
+    public Userr getIdUser() {
         return idUser;
     }
 
-    public void setIdUser(User idUser) {
+    public void setIdUser(Userr idUser) {
         this.idUser = idUser;
     }
 
-    public User getIdMembreCO() {
+    public Userr getIdMembreCO() {
         return idMembreCO;
     }
 
-    public void setIdMembreCO(User idMembreCO) {
+    public void setIdMembreCO(Userr idMembreCO) {
         this.idMembreCO = idMembreCO;
     }
 

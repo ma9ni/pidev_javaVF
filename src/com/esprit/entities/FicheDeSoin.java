@@ -16,11 +16,11 @@ public class FicheDeSoin {
 
     //Les attributs
     private int id;
-    private User id_membre;
+    private Userr id_membre;
     private String observation;
     private String medicament;
     private Date prochainRDV;
-    private animal id_animal;
+    private Animal id_Animal;
     private Date dateCreation;
     private int etat;
 
@@ -34,11 +34,11 @@ public class FicheDeSoin {
         this.id = id;
     }
 
-    public User getId_membre() {
+    public Userr getId_membre() {
         return id_membre;
     }
 
-    public void setId_membre(User id_membre) {
+    public void setId_membre(Userr id_membre) {
         this.id_membre = id_membre;
     }
 
@@ -66,12 +66,12 @@ public class FicheDeSoin {
         this.prochainRDV = prochainRDV;
     }
 
-    public animal getId_animal() {
-        return id_animal;
+    public Animal getId_Animal() {
+        return id_Animal;
     }
 
-    public void setId_animal(animal id_animal) {
-        this.id_animal = id_animal;
+    public void setId_Animal(Animal id_Animal) {
+        this.id_Animal = id_Animal;
     }
 
     public Date getDateCreation() {
@@ -93,13 +93,13 @@ public class FicheDeSoin {
     public FicheDeSoin() {
     }
 
-    public FicheDeSoin(int id, User id_membre, String observation, String medicament, Date prochainRDV, animal id_animal, Date dateCreation, int etat) {
+    public FicheDeSoin(int id, Userr id_membre, String observation, String medicament, Date prochainRDV, Animal id_Animal, Date dateCreation, int etat) {
         this.id = id;
         this.id_membre = id_membre;
         this.observation = observation;
         this.medicament = medicament;
         this.prochainRDV = prochainRDV;
-        this.id_animal = id_animal;
+        this.id_Animal = id_Animal;
         this.dateCreation = dateCreation;
         this.etat = etat;
     }
@@ -112,20 +112,20 @@ public class FicheDeSoin {
 
     }
 
-    public FicheDeSoin(User id_membre, String observation, String medicament, Date prochainRDV, animal id_animal, Date dateCreation, int etat) {
+    public FicheDeSoin(Userr id_membre, String observation, String medicament, Date prochainRDV, Animal id_Animal, Date dateCreation, int etat) {
 
         this.id_membre = id_membre;
         this.observation = observation;
         this.medicament = medicament;
         this.prochainRDV = prochainRDV;
-        this.id_animal = id_animal;
+        this.id_Animal = id_Animal;
         this.dateCreation = dateCreation;
         this.etat = etat;
     }
 
     @Override
     public String toString() {
-        return "FicheDeSoin{" + "id=" + id + ", id_membre=" + id_membre + ", observation=" + observation + ", medicament=" + medicament + ", prochainRDV=" + prochainRDV + ", id_animal=" + id_animal + ", dateCreation=" + dateCreation + ", etat=" + etat + ", formater=" + formater + '}';
+        return "FicheDeSoin{" + "id=" + id + ", id_membre=" + id_membre + ", observation=" + observation + ", medicament=" + medicament + ", prochainRDV=" + prochainRDV + ", id_Animal=" + id_Animal + ", dateCreation=" + dateCreation + ", etat=" + etat + ", formater=" + formater + '}';
     }
 
 }

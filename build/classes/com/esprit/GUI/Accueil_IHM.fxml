@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-radius: 40;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.GUI.Accueil_IHMController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-radius: 40;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.GUI.Accueil_IHMController">
     <children>
         <AnchorPane fx:id="imagebaghround" prefHeight="102.0" prefWidth="900.0" style="-fx-background-color: #4E5F53;">
          <children>
@@ -16,6 +16,7 @@
                   <Image url="@../../../1.jpg" />
                </image>
             </ImageView>
+            <Button layoutX="749.0" layoutY="51.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: #6495ED;" text="Login &amp; Inscription" />
          </children></AnchorPane>
       <AnchorPane fx:id="plan" layoutX="291.0" layoutY="138.0" prefHeight="462.0" prefWidth="900.0" style="-fx-background-color: #6495ED;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="138.0" />
       <AnchorPane fx:id="MenuAnchorpane" prefHeight="600.0" prefWidth="233.0">

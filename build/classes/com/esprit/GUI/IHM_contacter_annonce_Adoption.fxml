@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="490.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.GUI.IHM_contacter_annonce_AdoptionController">
+   <children>
+      <Label layoutX="85.0" layoutY="44.0" text=" Cet annonceur vous pouvez être contacté par téléphone au  :" />
+      <Label fx:id="tel" layoutX="429.0" layoutY="44.0" text="Label" />
+      <TextField fx:id="email" layoutX="182.0" layoutY="121.0" prefHeight="25.0" prefWidth="423.0" />
+      <TextArea fx:id="message" layoutX="182.0" layoutY="186.0" prefHeight="200.0" prefWidth="429.0" />
+      <Label layoutX="54.0" layoutY="125.0" text="saisir votre email :" />
+      <Label layoutX="52.0" layoutY="262.0" text="Saisir Votre message :" />
+      <Button layoutX="468.0" layoutY="439.0" mnemonicParsing="false" onAction="#Retour" prefHeight="25.0" prefWidth="58.0" text="Retour" />
+      <Button layoutX="547.0" layoutY="439.0" mnemonicParsing="false" onAction="#Annuler" text="Annuler" />
+      <Label fx:id="erroremail" layoutX="182.0" layoutY="154.0" textFill="#f80b0b" />
+      <Label fx:id="erormessage" layoutX="196.0" layoutY="395.0" textFill="#f50909" />
+      <Button layoutX="232.0" layoutY="439.0" mnemonicParsing="false" onAction="#envoyerMail" text="Envoyer l'email" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.GUI.IHM_Modifier_PaswordController">
+   <children>
+      <Button layoutX="245.0" layoutY="289.0" mnemonicParsing="false" onAction="#Modifier" prefHeight="25.0" prefWidth="69.0" text="Modifier" />
+      <Label layoutX="177.0" layoutY="33.0" prefHeight="27.0" prefWidth="265.0" text="Modification du mot de passe">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="passe" layoutX="214.0" layoutY="138.0" textFill="#f20303" />
+     
+      <Button layoutX="341.0" layoutY="289.0" mnemonicParsing="false" onAction="#retour" prefHeight="25.0" prefWidth="69.0" text="Retour" />
+      <Label fx:id="nouveaupasse" layoutX="214.0" layoutY="192.0" textFill="#f80606" />
+      <Label fx:id="nouveaupasseConfirmer" layoutX="214.0" layoutY="248.0" textFill="#ee0101" />
+      <PasswordField fx:id="passeActuel" layoutX="201.0" layoutY="113.0" prefHeight="25.0" prefWidth="216.0" promptText="mot de passe Actuel" />
+      <PasswordField fx:id="passeNouveau" layoutX="201.0" layoutY="167.0" prefHeight="25.0" prefWidth="216.0" promptText="nouveau mot de passe" />
+      <PasswordField fx:id="passeNouveauConfirmer" layoutX="201.0" layoutY="223.0" prefHeight="25.0" prefWidth="216.0" promptText="confirmer nouveau mot de passe" />
+   </children>
+</AnchorPane>

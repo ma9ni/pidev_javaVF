@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.GUI.IHM_Forget_PaswordController">
+   <children>
+      <Button layoutX="402.0" layoutY="338.0" mnemonicParsing="false" onAction="#Retour" text="Retour" />
+      <Button layoutX="490.0" layoutY="338.0" mnemonicParsing="false" onAction="#Annuler" text="Annuler" />
+      <Button layoutX="220.0" layoutY="246.0" mnemonicParsing="false" onAction="#envoyer" prefHeight="25.0" prefWidth="91.0" text="Envoyer" />
+      <TextField fx:id="email" layoutX="195.0" layoutY="175.0" prefHeight="25.0" prefWidth="228.0" promptText="email" />
+      <Label layoutX="102.0" layoutY="62.0" text="saisir L'email de votre compte">
+         <font>
+            <Font name="Arial Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="error" layoutX="195.0" layoutY="141.0" textFill="#ee0808" />
+   </children>
+</AnchorPane>

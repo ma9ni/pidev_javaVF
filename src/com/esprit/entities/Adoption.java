@@ -21,13 +21,13 @@ public class Adoption {
     private int etatAdoption;
     private String description;
     private String type;
-    private animal idAnimal;
+    private Animal idAnimal;
 //constructeurs
 
     public Adoption() {
     }
 
-    public Adoption(User idMembre, String lieu, String description, String type, animal idAnimal) {
+    public Adoption(User idMembre, String lieu, String description, String type, Animal idAnimal) {
         this.idMembre = idMembre;
         this.lieu = lieu;
         this.description = description;
@@ -44,11 +44,11 @@ public class Adoption {
     }
 // les getters et stters
 
-    public animal getIdAnimal() {
+    public Animal getIdAnimal() {
         return idAnimal;
     }
 
-    public void setIdAnimal(animal idAnimal) {
+    public void setIdAnimal(Animal idAnimal) {
         this.idAnimal = idAnimal;
     }
 

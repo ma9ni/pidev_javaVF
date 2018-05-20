@@ -103,7 +103,7 @@ public class Accueil_IHMController implements Initializable {
 
     @FXML
     private void onClickDressage(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Makni_ListFicheDeDressage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("ConsulterFicheDeDressage.fxml"));
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

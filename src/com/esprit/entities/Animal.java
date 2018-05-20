@@ -12,7 +12,7 @@ import java.util.Date;
  *
  * @author salah
  */
-public class animal {
+public class Animal {
 
     private int id;
     private User id_membre;
@@ -28,7 +28,7 @@ public class animal {
 
     SimpleDateFormat formater = new SimpleDateFormat("yyyy-MM-dd");
 
-    public animal() {
+    public Animal() {
     }
 
     public int getId_membree() {
@@ -39,7 +39,7 @@ public class animal {
         this.id_membree = id_membree;
     }
 
-    public animal(int id, User id_membre, String nom, String nomproprietaire, String description, String sexe, Date datedenaissance, String race, String image) {
+    public Animal(int id, User id_membre, String nom, String nomproprietaire, String description, String sexe, Date datedenaissance, String race, String image) {
         this.id = id;
         this.id_membre = id_membre;
         this.nom = nom;
@@ -51,7 +51,7 @@ public class animal {
         this.image = image;
     }
 
-    public animal(int id, String nom, String description) {
+    public Animal(int id, String nom, String description) {
         this.id = id;
 
         this.nom = nom;
@@ -142,7 +142,7 @@ public class animal {
 
     }
 
-    public animal(String nom, String nomproprietaire, String image) {
+    public Animal(String nom, String nomproprietaire, String image) {
         this.nom = nom;
         this.nomproprietaire = nomproprietaire;
         this.image = image;

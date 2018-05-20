@@ -23,13 +23,13 @@ public class FicheDeDressage {
     private float noteTotal;
     private Date dateDebut;
     private Date dateFin;
-    private animal id_animal;
+    private Animal id_animal;
     private int etat;
 
     public FicheDeDressage() {
     }
 
-    public FicheDeDressage(int id, User id_membre, String specialite, float displine, float obeissance, float accompagnement, float interception, float noteTotal, Date dateDebut, Date dateFin, animal id_animal, int etat) {
+    public FicheDeDressage(int id, User id_membre, String specialite, float displine, float obeissance, float accompagnement, float interception, float noteTotal, Date dateDebut, Date dateFin, Animal id_animal, int etat) {
         this.id = id;
         this.id_membre = id_membre;
         this.specialite = specialite;
@@ -44,7 +44,7 @@ public class FicheDeDressage {
         this.etat = etat;
     }
 
-    public FicheDeDressage(User id_membre, String specialite, float displine, float obeissance, float accompagnement, float interception, float noteTotal, Date dateDebut, Date dateFin, animal id_animal, int etat) {
+    public FicheDeDressage(User id_membre, String specialite, float displine, float obeissance, float accompagnement, float interception, float noteTotal, Date dateDebut, Date dateFin, Animal id_animal, int etat) {
 
         this.id_membre = id_membre;
         this.specialite = specialite;
@@ -153,11 +153,11 @@ public class FicheDeDressage {
         this.dateFin = dateFin;
     }
 
-    public animal getId_animal() {
+    public Animal getId_animal() {
         return id_animal;
     }
 
-    public void setId_animal(animal id_animal) {
+    public void setId_animal(Animal id_animal) {
         this.id_animal = id_animal;
     }
 

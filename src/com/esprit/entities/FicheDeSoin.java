@@ -20,7 +20,7 @@ public class FicheDeSoin {
     private String observation;
     private String medicament;
     private Date prochainRDV;
-    private animal id_animal;
+    private Animal id_animal;
     private Date dateCreation;
     private int etat;
 
@@ -66,11 +66,11 @@ public class FicheDeSoin {
         this.prochainRDV = prochainRDV;
     }
 
-    public animal getId_animal() {
+    public Animal getId_animal() {
         return id_animal;
     }
 
-    public void setId_animal(animal id_animal) {
+    public void setId_animal(Animal id_animal) {
         this.id_animal = id_animal;
     }
 
@@ -93,7 +93,7 @@ public class FicheDeSoin {
     public FicheDeSoin() {
     }
 
-    public FicheDeSoin(int id, User id_membre, String observation, String medicament, Date prochainRDV, animal id_animal, Date dateCreation, int etat) {
+    public FicheDeSoin(int id, User id_membre, String observation, String medicament, Date prochainRDV, Animal id_animal, Date dateCreation, int etat) {
         this.id = id;
         this.id_membre = id_membre;
         this.observation = observation;
@@ -112,7 +112,7 @@ public class FicheDeSoin {
 
     }
 
-    public FicheDeSoin(User id_membre, String observation, String medicament, Date prochainRDV, animal id_animal, Date dateCreation, int etat) {
+    public FicheDeSoin(User id_membre, String observation, String medicament, Date prochainRDV, Animal id_animal, Date dateCreation, int etat) {
 
         this.id_membre = id_membre;
         this.observation = observation;

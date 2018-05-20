@@ -8,11 +8,12 @@ package com.esprit.SERVICE;
 import Utilities.DataSource;
 import com.esprit.entities.FicheDeDressage;
 import com.esprit.entities.User;
-import com.esprit.entities.animal;
+import com.esprit.entities.Animal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 /**
@@ -26,14 +27,13 @@ public class FicheDeDressageService {
     private ResultSet rss = null;
     private PreparedStatement ps = null;
     private PreparedStatement pss = null;
-    animal a;
+    SimpleDateFormat formater = new SimpleDateFormat("yyyy-MM-dd");
+    Animal a;
 
     public ArrayList displayFicheDeDressage() {
-
         FicheDeDressage fdd;
         ArrayList<FicheDeDressage> fiList = new ArrayList<>();
         try {
-
             String req = "Select * From f_dressage where etat=1 and  id_membre = " + 12;
             ps = conn.prepareStatement(req);
 
@@ -55,9 +55,8 @@ public class FicheDeDressageService {
                 pss = conn.prepareStatement(req2);
                 pss.setInt(1, rs.getInt("id_animal"));
                 rss = pss.executeQuery();
-
                 while (rss.next()) {
-                    a = new animal(rss.getInt("id"), rss.getString("nom"), rss.getString("description"));
+                    a = new Animal(rss.getInt("id"), rss.getString("nom"), rss.getString("description"));
                 }
                 System.out.println(a);
                 fdd.setId_animal(a);
@@ -68,6 +67,102 @@ public class FicheDeDressageService {
             System.out.println(ex.getMessage());
             return fiList;
         }
+    }
+
+    public int ajouterFicheDeDressage(FicheDeDressage fdd) {
+
+        String datdebu = formater.format(fdd.getDateDebut());
+        String datfin = formater.format(fdd.getDateFin());
+        String req1 = "INSERT INTO `f_dressage`(`id_membre`, `displine`, `obeissance`, `specialite`, `accompagnement`, `interception`, `noteTotale`, `dateDebut`, `dateFin`, `id_animal`, `etat`) VALUES (?,?,?,?,?,?,?,?,?,?,1)";
+        try {
+
+            ps = conn.prepareStatement(req1);
+            ps.setInt(1, 12);
+            ps.setFloat(2, fdd.getDispline());
+            ps.setFloat(3, fdd.getObeissance());
+            ps.setString(4, fdd.getSpecialite());
+            ps.setFloat(5, fdd.getAccompagnement());
+            ps.setFloat(6, fdd.getInterception());
+            ps.setFloat(7, fdd.getNoteTotal());
+            ps.setString(8, datdebu);
+            ps.setString(9, datfin);
+            ps.setInt(10, fdd.getId_animal().getId());
+            ps.execute();
+            System.out.println("Insertion Ok");
+            return 1;
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return 0;
+    }
+
+    public int modifierFicheDeDressage(FicheDeDressage fdd) {
+        try {
+            String datdebu = formater.format(fdd.getDateDebut());
+            String datfin = formater.format(fdd.getDateFin());
+            String req = "UPDATE `f_dressage` SET `id_membre`=?,`displine`=?,`obeissance`=?,`specialite`=?,`accompagnement`=?,`interception`=?,`noteTotale`=?,`dateDebut`=?,`dateFin`=?,`id_animal`=?,`etat`=1 Where id =? ";
+            ps = conn.prepareStatement(req);
+            ps.setInt(1, fdd.getId_membre().getId());
+            ps.setFloat(2, fdd.getDispline());
+            ps.setFloat(3, fdd.getObeissance());
+            ps.setString(4, fdd.getSpecialite());
+            ps.setFloat(5, fdd.getAccompagnement());
+            ps.setFloat(6, fdd.getInterception());
+            ps.setFloat(7, fdd.getNoteTotal());
+            ps.setString(8, datdebu);
+            ps.setString(9, datfin);
+            ps.setInt(10, fdd.getId_animal().getId());
+            ps.setInt(11, fdd.getId());
+            ps.execute();
+            return 1;
+
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return 0;
+    }
+
+    public ArrayList<Animal> selectAllAnimal() {
+
+        ArrayList<Animal> ani = new ArrayList<>();
+        PreparedStatement pr;
+
+        try {
+            pr = conn.prepareStatement("SELECT * FROM animal ");
+            ResultSet res = pr.executeQuery();
+            while (res.next()) {
+                Animal a = new Animal();
+                a.setId(res.getInt("id"));
+                a.setNom(res.getString("nom"));
+                a.setNomproprietaire(res.getString("nomproprietaire"));
+                a.setDescription(res.getString("description"));
+                a.setSexe(res.getString("sexe"));
+                a.setDescription(res.getString("Datedenaissance"));
+                a.setImage(res.getString("image"));
+                a.setRace(res.getString("race"));
+                ani.add(a);
+
+            }
+        } catch (SQLException ex) {
+            ex.toString();
+        }
+
+        return ani;
+
+    }
+
+    public int supprimerFicheDeDressage(FicheDeDressage fdd) {
+        try {
+            String req = "update f_dressage set etat= 0 where id =? ";
+            ps = conn.prepareStatement(req);
+            ps.setInt(1, fdd.getId());
+            ps.execute();
+            return 1;
+
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return 0;
     }
 
 }

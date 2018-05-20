@@ -126,7 +126,6 @@ public class ConsulterFicheDeDressageController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         Modifier.setDisable(true);
-        id.setCellValueFactory(new PropertyValueFactory<>("id_f_Dressage"));
         specialite.setCellValueFactory(new PropertyValueFactory<>("specialite"));
         displine.setCellValueFactory(new PropertyValueFactory<>("displine"));
         obeissance.setCellValueFactory(new PropertyValueFactory<>("obeissance"));

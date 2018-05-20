@@ -141,7 +141,7 @@ public class ConsulterFicheDeDressageController implements Initializable {
         (event) -> {
 
             if (event.getClickCount() == 2) {
-                ConsulterFicheDeDressageController.iddd = listeFicheDeDressage.getItems().get(listeFicheDeDressage.getSelectionModel().getSelectedIndex()).getId_animal().getId();
+                ConsulterFicheDeDressageController.iddd = listeFicheDeDressage.getItems().get(listeFicheDeDressage.getSelectionModel().getSelectedIndex()).getId_animal().getIdAnimal();
                 fs = listeFicheDeDressage.getItems().get(listeFicheDeDressage.getSelectionModel().getSelectedIndex());
                 specialitetext.setText(fs.getSpecialite());
                 obeissancetext.setText(String.valueOf(fs.getObeissance()));

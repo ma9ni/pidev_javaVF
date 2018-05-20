@@ -165,7 +165,7 @@ public class FicheDeSoin {
         String dateprrdv = formater.format(this.prochainRDV);
         String datepcre = formater.format(this.dateCreation);
 
-        String req = "INSERT INTO `f_soin`(`id`, `id_membre`, `observation`, `medicament`, `dateCreation`,`prochainRDV`, `id_animal`, `etat`) VALUES (" + this.id + "," + this.id_membre.getId() + ",'" + this.observation + "','" + this.medicament + "','" + datepcre + "','" + dateprrdv + "'," + this.id_animal.getId() + ",1)";
+        String req = "INSERT INTO `f_soin`(`id`, `id_membre`, `observation`, `medicament`, `dateCreation`,`prochainRDV`, `id_animal`, `etat`) VALUES (" + this.id + "," + this.id_membre.getId() + ",'" + this.observation + "','" + this.medicament + "','" + datepcre + "','" + dateprrdv + "'," + this.id_animal.getIdAnimal() + ",1)";
         try {
             /**
              * execution de la requette**

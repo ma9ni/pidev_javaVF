@@ -86,7 +86,7 @@ public class FicheDeDressageService {
             ps.setFloat(7, fdd.getNoteTotal());
             ps.setString(8, datdebu);
             ps.setString(9, datfin);
-            ps.setInt(10, fdd.getId_animal().getId());
+            ps.setInt(10, fdd.getId_animal().getIdAnimal());
             ps.execute();
             System.out.println("Insertion Ok");
             return 1;
@@ -111,7 +111,7 @@ public class FicheDeDressageService {
             ps.setFloat(7, fdd.getNoteTotal());
             ps.setString(8, datdebu);
             ps.setString(9, datfin);
-            ps.setInt(10, fdd.getId_animal().getId());
+            ps.setInt(10, fdd.getId_animal().getIdAnimal());
             ps.setInt(11, fdd.getId());
             ps.execute();
             return 1;
@@ -132,13 +132,13 @@ public class FicheDeDressageService {
             ResultSet res = pr.executeQuery();
             while (res.next()) {
                 Animal a = new Animal();
-                a.setId(res.getInt("id"));
+                a.setIdAnimal(res.getInt("id"));
                 a.setNom(res.getString("nom"));
                 a.setNomproprietaire(res.getString("nomproprietaire"));
                 a.setDescription(res.getString("description"));
                 a.setSexe(res.getString("sexe"));
                 a.setDescription(res.getString("Datedenaissance"));
-                a.setImage(res.getString("image"));
+                a.setPhoto(res.getString("image"));
                 a.setRace(res.getString("race"));
                 ani.add(a);
 

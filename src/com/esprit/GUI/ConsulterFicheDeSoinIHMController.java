@@ -115,7 +115,7 @@ public class ConsulterFicheDeSoinIHMController implements Initializable {
                 prchRDV.setValue(lc);
                 medi.setText(fs.getMedicament());
                 id = fs.getId();
-                idanim = fs.getId_animal().getId();
+                idanim = fs.getId_animal().getIdAnimal();
 
             }
         });

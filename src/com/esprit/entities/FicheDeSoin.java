@@ -21,6 +21,7 @@ public class FicheDeSoin {
     private String medicament;
     private Date prochainRDV;
     private Animal id_Animal;
+
     private Date dateCreation;
     private int etat;
 
@@ -74,6 +75,14 @@ public class FicheDeSoin {
         this.id_Animal = id_Animal;
     }
 
+    public Animal getId_animal() {
+        return id_Animal;
+    }
+
+    public void setId_animal(Animal id_animal) {
+        this.id_Animal = id_animal;
+    }
+
     public Date getDateCreation() {
         return dateCreation;
     }
@@ -94,6 +103,7 @@ public class FicheDeSoin {
     }
 
     public FicheDeSoin(int id, Userr id_membre, String observation, String medicament, Date prochainRDV, Animal id_Animal, Date dateCreation, int etat) {
+
         this.id = id;
         this.id_membre = id_membre;
         this.observation = observation;

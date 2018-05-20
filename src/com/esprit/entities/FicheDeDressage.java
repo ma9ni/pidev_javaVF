@@ -30,6 +30,7 @@ public class FicheDeDressage {
     }
 
     public FicheDeDressage(int id, Userr id_membre, String specialite, float displine, float obeissance, float accompagnement, float interception, float noteTotal, Date dateDebut, Date dateFin, Animal id_animal, int etat) {
+
         this.id = id;
         this.id_membre = id_membre;
         this.specialite = specialite;

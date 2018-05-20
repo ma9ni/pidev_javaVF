@@ -34,6 +34,8 @@ public class Animal {
     private Double poid;
     private int etat;
     private int id_membre;
+    private String Nomproprietaire;
+    private String sexe;
 
     public Animal() {
     }
@@ -82,6 +84,38 @@ public class Animal {
         this.poid = poid;
         this.etat = etat;
         this.id_membre = id_membre;
+    }
+
+    public Animal(String type, String nom, String race, Date date_naissance, String description, String photo, ImageView image, Double poid, int etat, int id_membre, String Nomproprietaire, String sexe, Statement stmt) {
+        this.type = type;
+        this.nom = nom;
+        this.race = race;
+        this.date_naissance = date_naissance;
+        this.description = description;
+        this.photo = photo;
+        this.image = image;
+        this.poid = poid;
+        this.etat = etat;
+        this.id_membre = id_membre;
+        this.Nomproprietaire = Nomproprietaire;
+        this.sexe = sexe;
+        this.stmt = stmt;
+    }
+
+    public String getNomproprietaire() {
+        return Nomproprietaire;
+    }
+
+    public void setNomproprietaire(String Nomproprietaire) {
+        this.Nomproprietaire = Nomproprietaire;
+    }
+
+    public String getSexe() {
+        return sexe;
+    }
+
+    public void setSexe(String sexe) {
+        this.sexe = sexe;
     }
 
     public int getIdAnimal() {
@@ -233,7 +267,6 @@ public class Animal {
 
             }
         } catch (SQLException ex) {
-            Logger.getLogger(sosDisparition.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         return ani;

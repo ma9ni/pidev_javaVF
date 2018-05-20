@@ -28,18 +28,22 @@ public class Adoption {
     private String description;
     private String type;
     private int idAnimal;
+    //  private Animal idAnimal;
 //constructeurs
 
     public Adoption() {
     }
 
     public Adoption(int idMembre, String lieu, String description, String type, int idAnimal) {
-        this.idMembre = idMembre;
-        this.lieu = lieu;
-        this.description = description;
-        this.type = type;
-        this.idAnimal = idAnimal;
+
     }
+//    public Adoption(Userr idMembre, String lieu, String description, String type, Animal idAnimal) {
+//        this.idMembre = idMembre;
+//        this.lieu = lieu;
+//        this.description = description;
+//        this.type = type;
+//        this.idAnimal = idAnimal;
+//    }
 
     public Adoption(int idMembre, Date dateAnnonce, String lieu, int etatAdoption, String description) {
         this.idMembre = idMembre;
@@ -55,7 +59,7 @@ public class Adoption {
     }
 
     public void setIdAnimal(int idAnimal) {
-        this.idAnimal = idAnimal;
+
     }
 
     public String getType() {

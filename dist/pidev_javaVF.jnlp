@@ -32,7 +32,7 @@
     <jar href="lib\okhttp-3.9.1.jar" size="406252" download="eager" />
     <jar href="lib\okio-1.13.0.jar" size="81811" download="eager" />
     <jar href="lib\restfb-2.2.0.jar" size="545965" download="eager" />
-    <jar href="pidev_javaVF.jar" size="610562" download="eager" />
+    <jar href="pidev_javaVF.jar" size="638393" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="pidev_javaVF" >
     <param name="requiredFXVersion" value="8.0+"/>

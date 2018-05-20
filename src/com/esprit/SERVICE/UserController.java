@@ -110,19 +110,19 @@ public class UserController {
         str = "$2y";
         try {
 
-            hasch = BCrypt.hashpw(password, BCrypt.gensalt());
+            hasch = BCrypt.hashpw(password, BCrypt.gensalt(13));
 //            String pwd = StringUtil.replaceAll(hasch, "$2a", "$2y");
-            for (int i = 3; i < hasch.length(); i++) {
-                str = str + hasch.charAt(i);
-
-            }
+//            for (int i = 3; i < hasch.length(); i++) {
+//                str = str + hasch.charAt(i);
+//
+//            }
             System.out.println(str);
         } catch (Exception e) {
             System.out.println("" + e.toString());
         }
 
         //String pwd = StringUtil.replaceAll(hasch, "$2a", "$2y");
-        return str;
+        return hasch;
     }
 
     //la methode modifier
@@ -308,7 +308,7 @@ public class UserController {
             System.out.println(leResultat2.getPasword());
             try {
                 String passs = "$2y$13$sLt/hSIea8bcrokcKePzOOeDPiIUjneRaf6iTMI2tR6w981a7lOHq";
-                if (BCrypt.checkpw(paswords, leResultat2.getPasword())) {
+                if (BCrypt.checkpw(paswords, leResultat2.getPasword()) == true) {
 
                     System.out.println("connexion vrais");
                     return 1;
@@ -359,7 +359,7 @@ public class UserController {
                 leResultat.setPasword(res.getString("password"));
                 leResultat.setImage(res.getString("image"));
                 leResultat.setAdresse(res.getString("adresse"));
-                leResultat.setRole(res.getString("role"));
+                leResultat.setRole(res.getString("roles"));
                 leResultat.setNum_tel(res.getInt("num_tel"));
                 leResultat.setId(res.getInt("id"));
 

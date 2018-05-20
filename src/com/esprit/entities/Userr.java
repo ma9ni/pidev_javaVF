@@ -32,6 +32,10 @@ public class Userr {
     private static int IdOfConnectedUser = 0;
     private static Userr userConncter;
 
+    public Userr(int id) {
+        this.id = id;
+    }
+
     public Userr(String username, String email, String pasword, int num_tel, String image, String adresse, String role) {
         this.username = username;
         this.email = email;

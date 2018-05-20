@@ -76,7 +76,7 @@ public class Accueil_IHMController implements Initializable {
 
     @FXML
     private void onClickSoin(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Makni_AffichageFicheDeSoinGUI.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("ConsulterFicheDeSoinIHM.fxml"));
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -90,7 +90,15 @@ public class Accueil_IHMController implements Initializable {
     }
 
     @FXML
-    private void onClickAnimal(ActionEvent event) {
+    private void onClickAnimal(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("AcueilAnimal.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.hide();
+        stage.setScene(scene);
+        stage.show();
+
     }
 
     @FXML
@@ -130,6 +138,10 @@ public class Accueil_IHMController implements Initializable {
         stage.setScene(scene);
         stage.show();
 
+    }
+
+    @FXML
+    private void logout(ActionEvent event) {
     }
 
 }

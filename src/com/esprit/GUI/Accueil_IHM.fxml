@@ -17,6 +17,7 @@
                </image>
             </ImageView>
             <Button layoutX="749.0" layoutY="51.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: #6495ED;" text="Login &amp; Inscription" />
+            <Button layoutX="772.0" layoutY="51.0" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: #6495ED;" text="Logout" />
          </children></AnchorPane>
       <AnchorPane fx:id="plan" layoutX="291.0" layoutY="138.0" prefHeight="462.0" prefWidth="900.0" style="-fx-background-color: #6495ED;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="138.0" />
       <AnchorPane fx:id="MenuAnchorpane" prefHeight="600.0" prefWidth="233.0">
